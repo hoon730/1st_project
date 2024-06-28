@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-withe-color: #fff;
+    --main-black-color: #111;
+    --box-border-color: rgb(231, 131, 0);
+}
+
+body {
+    background: var(--main-black-color);
+    color: var(--main-withe-color);
+    position: relative;
+    font-family: "Roboto";
+    font: var(--main-withe-color);
+}
+
+ul, li {
+    list-style: none;
+}
+
+a, em {
+    text-decoration: none;
+    color: inherit;
+    font-style: normal;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header .logo {
+    display: flex; 
+    gap: 20px;
+}
+
+header .logo_letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Fugaz One";
+    font-size: 25px;
+}
+
+header .logo .logo_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+header .gnb {
+    width: 300px;
+}
+
+header .gnb ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 200px;
+}
+
+/* main */
+#main {
+    display: flex;
+}
+
+#main .main_left {
+    width: 66.6%;
+    height: 100%;
+    /* border-right: 1px solid var(--box-border-color); */
+}
+
+#main .main_left .main_left_blank {
+    width: 100%;
+    height: 40%;
+    border-bottom: 1px solid var(--box-border-color);
+}
+
+#main .main_left .main_left_text {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-right: 1px solid var(--box-border-color);
+    /* border-bottom: 1px solid var(--box-border-color); */
+}
+
+#main .main_left .main_left_text span {
+    letter-spacing: -2%;
+}
+
+#main .main_left .main_left_text span em {
+    font-family: "Fugaz One";
+}
+
+#main .main_left .main_left_text span:nth-child(1) {
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+#main .main_left .main_left_text span:nth-child(2) {
+    font-size: 140px;
+    line-height: 140px;
+    font-weight: 500;
+}
+
+#main .main_left .main_left_text span:nth-child(3) {
+    font-size: 140px;
+    line-height: 140px;
+    font-weight: 500;
+}
+
+#main .main_right {
+    width: 33.3%;
+    height: 100%;
+}
+
+#main .main_right .main_right_blank {
+    width: 100%;
+    height: 50%;
+    border-bottom: 4px solid var(--box-border-color);
+
+}
+
+#main .main_right .main_right_text {
+    width: 100%;
+    height: 50%;
+    /* border-bottom: 1px solid var(--box-border-color); */
+}
+
+#main .main_right .main_right_text span {
+    display: flex;
+    flex-direction: column;
+}
+
+#main .main_right .main_right_text span:nth-child(1) {
+    font-size: 48px;
+}
+
+#main .main_right .main_right_text span:nth-child(2) {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+/* about_intro */
+#about_intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about_intro .about_intro_text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+#about_intro .about_intro_text div{
+    position: relative;
+}
+
+#about_intro .about_intro_text span {
+    height: 70px;
+    font-size: 58px;
+    position: relative;
+}
+
+#about_intro .about_intro_text span em {
+    position: absolute;
+    top: 15%;
+    left: -5%;
+    font-family: "Roboto";
+    font-size: 19px;
+    font-weight: bold;
+    color: var(--box-border-color);
+}
+
+#about_intro .about_intro_text div:nth-child(1) {
+    animation: about_im 60s linear infinite;
+    transform: translateX(45%);
+}
+/* @keyframes about_im {
+    0%{transform: translateX(48%);}
+    50%{transform: translateX(0);}
+    100%{transform: translateX(48%);}
+} */
+
+#about_intro .about_intro_text div:nth-child(2) {
+    animation: about_figma 60s linear infinite;
+    transform: translateX(15%);
+}
+/* @keyframes about_figma {
+    0%{transform: translateX(15%);}
+    50%{transform: translateX(100%);}
+    100%{transform: translateX(15%);}
+} */
+
+#about_intro .about_intro_text div:nth-child(3) {
+    animation: about_javascript 30s linear infinite;
+    transform: translateX(65%);
+}
+#about_intro .about_intro_text div:nth-child(4) {
+    animation: about_html 30s linear infinite;
+    transform: translateX(30%);
+}
+
+#about_intro .about_intro_text div:nth-child(5) {
+    animation: about_css 30s linear infinite;
+    transform: translateX(92%);
+}
+
+#about_intro .about_intro_text div:nth-child(6) {
+    animation: about_node 30s linear infinite;
+    transform: translateX(48%);
+}
+
+#about_intro .about_intro_text div:nth-child(7) {
+    animation: about_react 30s linear infinite;
+    transform: translateX(1%);
+}
+
+#about_intro .about_intro_text div:nth-child(8) {
+    animation: about_better 30s linear infinite;
+    transform: translateX(75%);
+}
+
+#about_intro .about_intro_text div:nth-child(9) {
+    animation: about_figma 30s linear infinite;
+    transform: translateX(39%);
+}
+
+
+
+#about_intro .about_intro_text .about_intro_text_en{
+    font-family: "Fugaz One";
+}
+
+/* about_desc */
+#about_desc {}
+
+.about_desc_top {
+    display: flex;
+    height: 40%;
+}
+
+.about_desc_top .about_desc_top_left{
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.about_desc_top .about_desc_top_left p{
+    width: 75%;
+    -webkit-line-clamp: 4;
+    font-size: 29px;
+    padding-left: 40px;
+    padding-bottom: 80px;
+}
+
+.about_desc_top .about_desc_top_right {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.about_desc_top .about_desc_top_right p{
+    width: 75%;
+    padding-right: 40px;
+    -webkit-line-clamp: 4;
+    font-size: 29px;
+}
+
+.about_desc_bottom {
+    height: 60%;
+}
+
+.about_desc_bottom span{
+    display: block;
+    font-family: "Fugaz One";
+    font-size: 432px;
+    text-align: center;
+}
+
+/* detail */
+#detail {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+#detail .detail_uppertext {
+    position: relative;
+    width: 500%;
+    animation: detail_text 30s linear infinite;
+    margin-bottom: 240px;
+}
+@keyframes detail_text {
+    0%{left: -300%;}
+    100%{left: 0%;}
+}
+
+#detail .detail_uppertext span {
+    font-size: 96px;
+}
+
+#detail .detail_uppertext span em{
+    color: var(--box-border-color);
+}
+
+.detail_list {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.detail_list .list {
+    width: 100%;
+    padding: 50px 100px;
+    display: flex;
+    gap: 50px;
+    border-top: 1px solid var(--box-border-color);
+    &:last-child {
+        border-bottom: 1px solid var(--box-border-color);
+    }
+}
+
+.detail_list .list .number {
+    font-size: 29px;
+    position: relative;
+}
+.detail_list .list .number em {
+    font-size: 19px;
+    position: absolute;
+    top: 2%;
+    left: -70%;
+}
+
+.detail_list .list .desc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail_list .list .desc span {
+    font-size: 29px;
+}
+
+
+
+
+
+@media screen and (max-width: 1280px) and (min-width: 390px) {
+
+}

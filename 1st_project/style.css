@@ -171,6 +171,18 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+#about_intro .about_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#about_intro .about_img svg {
+    fill: var(--box-border-color);
 }
 
 #about_intro .about_intro_text{
@@ -188,6 +200,8 @@ section {
     height: 70px;
     font-size: 58px;
     position: relative;
+    color: var(--main-black-color);
+    text-shadow: -1px 0px #fff, 0px 1px #fff, 1px 0px #fff, 0px -1px #fff;
 }
 
 #about_intro .about_intro_text span em {
@@ -306,6 +320,8 @@ section {
     font-family: "Fugaz One";
     font-size: 432px;
     text-align: center;
+    color: var(--main-withe-color);
+    text-shadow: -5px 0px var(--box-border-color), 0px 5px  var(--box-border-color), 1px 0px  var(--box-border-color), 0px -1px  var(--box-border-color);
 }
 
 /* detail */
@@ -370,6 +386,57 @@ section {
     font-size: 29px;
 }
 
+/* end */
+#end {
+    margin-bottom: 0;
+}
+
+#end .end_title {
+    height: calc(100% / 3 * 2);
+    text-align: center;
+}
+#end .end_title span {
+    font-size: 211px;
+}
+#end .end_title span em {
+    font-family: "Fugaz One";
+    color: var(--box-border-color);
+}
+
+#end .end_footer {
+    height: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#end .end_footer .end_footer_top {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#end .end_footer .end_footer_top button {
+    background: var(--main-black-color);
+    font-size: 38px;
+    color: var(--main-withe-color);
+    border: 1px solid var(--box-border-color);
+    &:first-child {
+        padding: 20px 40px;
+    }
+    &:last-child {
+        border: none;
+    }
+}
+
+#end .end_footer .end_footer_bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+#end .end_footer .end_footer_bottom span {
+    font-size: 24px;
+}
 
 
 

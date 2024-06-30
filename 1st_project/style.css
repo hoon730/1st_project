@@ -114,6 +114,7 @@ section {
 
 #main .main_left .main_left_text span em {
     font-family: "Fugaz One";
+    text-shadow: -5px 0px var(--box-border-color), 0px 5px  var(--box-border-color), 1px 0px  var(--box-border-color), 0px -1px  var(--box-border-color);
 }
 
 #main .main_left .main_left_text span:nth-child(1) {
@@ -401,6 +402,7 @@ section {
 #end .end_title span em {
     font-family: "Fugaz One";
     color: var(--box-border-color);
+    text-shadow: -5px 0px var(--main-withe-color), 0px 5px  var(--main-withe-color), 1px 0px  var(--main-withe-color), 0px -1px  var(--main-withe-color);
 }
 
 #end .end_footer {

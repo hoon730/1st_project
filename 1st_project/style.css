@@ -117,19 +117,34 @@ section {
     text-shadow: -5px 0px var(--box-border-color), 0px 5px  var(--box-border-color), 1px 0px  var(--box-border-color), 0px -1px  var(--box-border-color);
 }
 
-#main .main_left .main_left_text span:nth-child(1) {
+#main .main_left .main_left_text>span:nth-child(1) {
     text-align: center;
     font-size: 30px;
     line-height: 30px;
 }
 
-#main .main_left .main_left_text span:nth-child(2) {
+#main .main_left .main_left_text>span:nth-child(2) {
     font-size: 140px;
     line-height: 140px;
     font-weight: 500;
 }
 
-#main .main_left .main_left_text span:nth-child(3) {
+#main .main_left .main_left_text .main_left_text_slide {
+    width: 100%;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+#main .main_left .main_left_text .main_left_text_slide .main_left_text_slide_wrapper{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transition: all 0.5s;
+    transform: translateY(0);
+}
+
+#main .main_left .main_left_text .main_left_text_slide span {
     font-size: 140px;
     line-height: 140px;
     font-weight: 500;
@@ -143,14 +158,24 @@ section {
 #main .main_right .main_right_blank {
     width: 100%;
     height: 50%;
-    border-bottom: 4px solid var(--box-border-color);
-
+    /* border-bottom: 4px solid var(--box-border-color); */
 }
 
 #main .main_right .main_right_text {
     width: 100%;
     height: 50%;
+    position: relative;
     /* border-bottom: 1px solid var(--box-border-color); */
+}
+
+#main .main_right .main_right_text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--box-border-color);
 }
 
 #main .main_right .main_right_text span {

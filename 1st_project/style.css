@@ -89,13 +89,44 @@ section {
 #main .main_left {
     width: 66.6%;
     height: 100%;
+    position: relative;
     /* border-right: 1px solid var(--box-border-color); */
+}
+
+#main .main_left::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 0;
+    background: var(--box-border-color);
+    transition: all 0.5s;
+}
+
+#main.active .main_left::before {
+    height: 100%;
 }
 
 #main .main_left .main_left_blank {
     width: 100%;
     height: 40%;
-    border-bottom: 1px solid var(--box-border-color);
+    position: relative;
+    /* border-bottom: 1px solid var(--box-border-color); */
+}
+
+#main .main_left .main_left_blank::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--box-border-color);
+    transition: all 0.5s;
+}
+
+#main.active .main_left .main_left_blank::before {
+    width: 100%;
 }
 
 #main .main_left .main_left_text {
@@ -104,8 +135,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    border-right: 1px solid var(--box-border-color);
-    /* border-bottom: 1px solid var(--box-border-color); */
+    /* border-right: 1px solid var(--box-border-color); */
 }
 
 #main .main_left .main_left_text span {
@@ -158,24 +188,28 @@ section {
 #main .main_right .main_right_blank {
     width: 100%;
     height: 50%;
-    /* border-bottom: 4px solid var(--box-border-color); */
 }
 
 #main .main_right .main_right_text {
     width: 100%;
     height: 50%;
     position: relative;
-    /* border-bottom: 1px solid var(--box-border-color); */
 }
 
-#main .main_right .main_right_text::before {
+#main .main_right .main_right_text::before{
     content: "";
     position: absolute;
     top: 0;
     left: 0;
+    width: 0;
+    height: 0;
+    background: var(--box-border-color);
+    transition: all 0.5s 1s;
+}
+
+#main.active .main_right .main_right_text::before {
     width: 100%;
     height: 5px;
-    background: var(--box-border-color);
 }
 
 #main .main_right .main_right_text span {

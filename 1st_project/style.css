@@ -149,7 +149,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #main .main_left .main_left_text .main_left_text_top span {
@@ -159,7 +159,7 @@ section {
 
 #main .main_left .main_left_text .main_left_text_middle {
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 #main .main_left .main_left_text .main_left_text_middle span {
     font-size: 140px;

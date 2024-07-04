@@ -48,11 +48,13 @@ function startSlide() {
       slider.style.transition = "0s";
       slider.style.transform = "translateY(0px)";
       currentIndex = 0;
-    }, 600); // transition과 동일하게 맞춰줌
+    }, 600); 
   }
 }
 
 setInterval(startSlide, 3000);
+
+
 
 //main 모든 텍스트 이벤트 
 const mainLeftText1 = document.querySelector(".main_left_text_top span");
@@ -69,8 +71,8 @@ window.onload = function() {
     let span = document.createElement("span");
     span.textContent = char;
     mainLeftText1.appendChild(span).style.transition = "all 0.3s";
-    mainLeftText1.appendChild(span).style.transform = "translateY(100%)";
-    span.classList.add("singleWord")
+    // mainLeftText1.appendChild(span).style.transform = "translateY(100%)";
+    span.classList.add("singleword")
   }
   
   for(let char of text2Container) {
@@ -81,13 +83,14 @@ window.onload = function() {
       span.style.textShadow = "-5px 0px var(--box-border-color), 0px 5px  var(--box-border-color), 1px 0px  var(--box-border-color), 0px -1px  var(--box-border-color)"
     }
     mainLeftText2.appendChild(span).style.transition = "all 0.3s";
-    mainLeftText2.appendChild(span).style.transform = "translateY(100%)";
-    span.classList.add("singleWord")
+    // mainLeftText2.appendChild(span).style.transform = "translateY(100%)";
+    span.classList.add("singleword")
   }
 
-  document.querySelectorAll(".singleWord").forEach((text, index) => {
+  document.querySelectorAll(".singleword").forEach((text, index) => {
     setTimeout(() => {
-      text.style.transform = "translateY(0)";
+      // text.style.transform = "translateY(0)";
+      text.classList.add("on")
     }, 80*(index+1));
   })
 
@@ -96,6 +99,9 @@ window.onload = function() {
 
 window.addEventListener("scroll", function() {
   let windowScroll = this.scrollY;
+
+  const section = document.querySelectorAll("section");
+
 
   
   

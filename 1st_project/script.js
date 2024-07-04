@@ -44,7 +44,7 @@ window.onload = function() {
     let span = document.createElement("span");
     span.textContent = char;
     mainLeftText1.appendChild(span).style.transition = "all 0.3s";
-    // mainLeftText1.appendChild(span).style.transform = "translateY(100%)";
+    mainLeftText1.appendChild(span).style.transform = "translateY(100%)";
     span.classList.add("singleword")
   }
   

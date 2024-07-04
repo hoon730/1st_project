@@ -70,10 +70,19 @@ window.onload = function() {
 };
 
 
+
+
+
 window.addEventListener("scroll", function() {
   let windowScroll = this.scrollY;
 
   const section = document.querySelectorAll("section");
+
+  section.forEach((section) => {
+    if(windowScroll >= section.offsetHeight - window.innerHeight / 5) {
+      section.classList.add("active");
+    }
+  })
 
 
   

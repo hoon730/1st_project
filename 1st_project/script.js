@@ -69,8 +69,35 @@ window.onload = function() {
 
 };
 
+//선생님 버전
+//   const mainLeftTextTop = document.querySelector(".main_left_text_top");
+// const mainLeftText2 = document.querySelector(".main_left_text_middle span");
 
+// let text1Container = "A Creative Road To Frontend 2024";
+// let text2Container = mainLeftText2.textContent;
 
+// mainLeftText2.innerHTML = "";
+
+// window.onload = function () {
+//   let delay = 0;
+
+//   for (let char of text1Container) {
+//     let span = document.createElement("span");
+//     span.textContent = char === " " ? "\u00A0" : char;
+//     span.style.opacity = 0;
+//     span.style.transform = "translateY(100%)";
+//     span.style.transition = "transform 0.3s, opacity 0.3s";
+//     mainLeftTextTop.appendChild(span);
+
+//     setTimeout(() => {
+//       requestAnimationFrame(() => {
+//         span.style.opacity = 1;
+//         span.style.transform = "translateY(0)";
+//       });
+//     }, delay);
+
+//     delay += 300;
+//   }
 
 
 window.addEventListener("scroll", function() {
@@ -84,7 +111,4 @@ window.addEventListener("scroll", function() {
     }
   })
 
-
-  
-  
 });

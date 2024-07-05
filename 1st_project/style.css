@@ -395,6 +395,7 @@ section {
     transform: translate(-50%, -50%);
     width: 380px;
     height: 480px;
+    border: 3px dotted var(--box-border-color);
     border-radius: 5%;
 }
     
@@ -461,16 +462,20 @@ section {
 
 /* detail */
 #detail {
-    overflow-x: hidden;
     height: 100%;
 }
 
 #detail .detail_uppertext {
+    overflow: hidden;
+}
+
+#detail .detail_uppertext .detail_uppertext_wrapper {
     position: relative;
     width: 500%;
     animation: detail_text 30s linear infinite;
     margin-bottom: 240px;
 }
+
 @keyframes detail_text {
     0%{left: -300%;}
     100%{left: 0%;}
@@ -484,40 +489,44 @@ section {
     color: var(--box-border-color);
 }
 
-.detail_list {
+#detail .detail_list {
     width: 1280px;
     margin: 0 auto;
 }
 
-.detail_list .list {
+#detail .detail_list .list {
     width: 100%;
-    padding: 50px 100px;
     display: flex;
     gap: 50px;
-    border-top: 1px solid var(--box-border-color);
+    padding: 50px 100px;
+    border-top: 2px solid var(--box-border-color);
+    transition: all 0.3s;
     &:last-child {
-        border-bottom: 1px solid var(--box-border-color);
+        border-bottom: 2px solid var(--box-border-color);
+    }
+    &:hover {
+        transform: scale(1.05);
     }
 }
 
-.detail_list .list .number {
+#detail .detail_list .list .number {
     font-size: 29px;
     position: relative;
 }
-.detail_list .list .number em {
+#detail .detail_list .list .number em {
     font-size: 19px;
     position: absolute;
     top: 2%;
     left: -70%;
 }
 
-.detail_list .list .desc {
+#detail .detail_list .list .desc {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.detail_list .list .desc span {
+#detail .detail_list .list .desc span {
     font-size: 29px;
 }
 

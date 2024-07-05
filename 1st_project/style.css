@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -337,6 +343,7 @@ section {
 }
 
 #about_intro .about_intro_text div:nth-child(1) {
+    font-family: 'SUIT-Regular';
     transform: translateX(45%);
 }
 
@@ -370,6 +377,7 @@ section {
 }
 
 #about_intro .about_intro_text div:nth-child(9) {
+    font-family: 'SUIT-Regular';
     transform: translateX(39%);
 }
 
@@ -427,8 +435,9 @@ section {
 
 .about_desc_top .about_desc_top_left p{
     width: 75%;
-    -webkit-line-clamp: 4;
+    font-family: 'SUIT-Regular';
     font-size: 29px;
+    text-align: justify;
     padding-left: 40px;
     padding-bottom: 80px;
 }
@@ -442,8 +451,9 @@ section {
 
 .about_desc_top .about_desc_top_right p{
     width: 75%;
+    font-family: 'SUIT-Regular';
+    text-align: justify ;
     padding-right: 40px;
-    -webkit-line-clamp: 4;
     font-size: 29px;
 }
 
@@ -515,6 +525,7 @@ section {
 }
 #detail .detail_list .list .number em {
     font-size: 19px;
+    color: var(--box-border-color);
     position: absolute;
     top: 2%;
     left: -70%;
@@ -524,10 +535,16 @@ section {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    
 }
 
 #detail .detail_list .list .desc span {
-    font-size: 29px;
+    font-family: 'SUIT-Regular';
+    font-size: 20px;
+    &:first-child {
+        font-family: "Fugaz One";
+        font-size: 29px;
+    }
 }
 
 /* end */

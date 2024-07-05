@@ -565,11 +565,16 @@ section {
     font-size: 38px;
     color: var(--main-withe-color);
     border: 1px solid var(--box-border-color);
+    transition: all 0.3s;
     &:first-child {
         padding: 20px 40px;
     }
     &:last-child {
         border: none;
+    }
+    &:hover:first-child{
+        background: var(--box-border-color);
+        color: var(--main-withe-color);
     }
 }
 

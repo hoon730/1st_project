@@ -6,8 +6,10 @@
     <title>About me</title>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/09d57ad258.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
+    <!-- javascript, css, media -->
     <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
 </head>
 <body>
     <main>
@@ -36,15 +38,15 @@
                         <span>A Creative Road To Frontend 2024</span>
                     </div>
                     <div class="main_left_text_middle">
-                        <span>Yeom Donghun</span>
+                        <span><em>Y</em>eom <em>D</em>onghun</span>
                     </div>
                     <div class="main_left_text_slide">
-                        <div class="main_left_text_slide_wrapper">
-                            <div class="main_left_text_slide_wrapper_slider">
-                                <span>Hilarious</span>
-                                <span>Happy</span>
-                                <span>Hyped</span>
-                            </div>
+                        <div class="main_left_text_slide_wrapper wrap">
+                            <ul class="main_left_text_slide_wrapper_slider">
+                                <li class="current">Hilarious</li>
+                                <li class="next">Happy</li>
+                                <li class="prev">Hyped</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -124,10 +126,10 @@
     </section>
     <!-- about_2 -->
     <section id="about_desc">
+        <div class="about_desc_top_img">
+            <img src="./img/me.png" alt="me">
+        </div>
         <article class="about_desc_top">
-            <div class="about_desc_top_img">
-                <img src="./img/me.png" alt="me">
-            </div>
             <div class="about_desc_top_left">
                 <p>
                     안녕하세요. 여러분 ! 제 이름은 염동훈입니다. 저는 쾌활하고 활동적인 사람입니다. 사람들과 대화를 나누는 것도 좋아합니다.
@@ -147,7 +149,7 @@
     <section id="detail">
             <article class="detail_uppertext">
                 <div class="detail_uppertext_wrapper">
-                    <span>Capability Ability <em>&</em> Capability Ability <em>&</em>  Capability Ability <em>&</em>  Capability Ability <em>&</em>  Capability Ability & Capability Ability <em>&</em>  Capability Ability </span>
+                    <span>Capability Ability <em>&</em> Capability Ability <em>&</em> Capability Ability <em>&</em>  Capability Ability <em>&</em>  Capability Ability <em>&</em> Capability Ability <em>&</em>  Capability Ability</span>
                 </div>
             </article>
         <article class="detail_list">
@@ -185,8 +187,8 @@
         </article>
         <article class="end_footer">
             <div class="end_footer_top">
-                <button>Let's get along!</button>
-                <button>Scroll to the Top</button>
+                <a href="#none">Let's get along!</a>
+                <a href="#">Scroll to the Top</a>
             </div>
             <div class="end_footer_bottom">
                 <span>Yeom Donghun . Road to Frontend 2406-2412</span>

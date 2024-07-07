@@ -76,6 +76,9 @@ header .logo .logo_menu {
 
 header .gnb {
     width: 20%;
+    .bar_menu {
+        display: none;
+    }
 }
 
 header .gnb ul {
@@ -91,7 +94,45 @@ header .gnb ul {
     }
 }
 
-header .gnb ul li a{}
+/* bar_slide */
+.bar_slide {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    width: 15%;
+    height: 100vh;
+
+    li {
+        width: 100px;
+        height: 7vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--main-black-color);
+        margin-bottom: 5px;
+
+        a {
+            position: relative;
+            font-size: 1.2rem;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -10%;
+                width: 0%;
+                height: 2px;
+                background: var(--box-border-color);
+                transition: all 0.3s;
+            }
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+}
+
 
 section {
     width: 100%;
@@ -219,8 +260,6 @@ section {
     height: 100%;
 }
 
-#main .main_left .main_left_text .main_left_text_slide .main_left_text_slide_wrapper .main_left_text_slide_wrapper_slider {}
-
 #main .main_left .main_left_text .main_left_text_slide li {
     font-size: 8.3vw;
     font-weight: 500;
@@ -276,7 +315,6 @@ section {
         width: 100%;
     }
 }
-
 
 #main .main_right .main_right_text span {
     display: flex;
@@ -353,11 +391,9 @@ section {
     transform: translateX(45%);
 }
 
-
 #about_intro .about_intro_text div:nth-child(2) {
     transform: translateX(15%);
 }
-
 
 #about_intro .about_intro_text div:nth-child(3) {
     transform: translateX(65%);
@@ -386,7 +422,6 @@ section {
     font-family: 'SUIT-Regular';
     transform: translateX(39%);
 }
-
 
 
 #about_intro .about_intro_text .about_intro_text_en{
@@ -612,6 +647,7 @@ section {
     &:hover:first-child{
         background: var(--box-border-color);
         color: var(--main-black-color);
+        border: 1px solid var(--box-border-color);
     }
 }
 

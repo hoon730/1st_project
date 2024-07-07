@@ -178,6 +178,27 @@
     /* header */
     header .gnb {
         width: 32%;
+        ul {
+            display: none;
+        }
+        .bar_menu {
+            display: block;
+            text-align: right;
+            a {
+                &:hover i{
+                    transform: translateX(-40%);
+                    color: var(--box-border-color);
+                }
+                i {
+                    font-size: 1.5rem;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+
+    .bar_slide {
+        display: block;
     }
 
     /* main */

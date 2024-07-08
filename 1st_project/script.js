@@ -22,6 +22,21 @@ const rollingCB = () => {
 
 let interval = setInterval(rollingCB, 3000);
 
+// bar_menu 클릭시 bar_slide 이벤트
+
+const barMenuBtn = document.querySelector(".bar_menu");
+const closeBtn = document.querySelector(".close");
+const barSlide = document.querySelector(".bar_slide");
+
+barMenuBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  barSlide.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  barSlide.classList.remove("active");
+});
+
 // 선생님 버전
 //   const mainLeftTextTop = document.querySelector(".main_left_text_top");
 // const mainLeftText2 = document.querySelector(".main_left_text_middle span");
@@ -79,7 +94,7 @@ window.addEventListener("scroll", function() {
   const section = document.querySelectorAll("section");
 
   section.forEach((section) => {
-    if(windowScroll >= section.offsetHeight - window.innerHeight / 5) {
+    if(windowScroll >= section.offsetHeight - window.innerHeight / 6) {
       section.classList.add("active");
     }
   })

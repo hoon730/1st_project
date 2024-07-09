@@ -27,6 +27,7 @@ let interval = setInterval(rollingCB, 3000);
 const barMenuBtn = document.querySelector(".bar_menu");
 const closeBtn = document.querySelector(".close");
 const barSlide = document.querySelector(".bar_slide");
+const barSlideBtn = barSlide.querySelectorAll("ul li");
 
 barMenuBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -35,6 +36,12 @@ barMenuBtn.addEventListener("click", (e) => {
 
 closeBtn.addEventListener("click", () => {
   barSlide.classList.remove("active");
+});
+
+barSlideBtn.forEach((el) => {
+  el.addEventListener("click", () => {
+    barSlide.classList.remove("active");
+  })
 });
 
 // 선생님 버전

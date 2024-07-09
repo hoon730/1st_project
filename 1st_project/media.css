@@ -207,7 +207,7 @@
     }
     
     #main .main_left::before {
-        animation: mainLeftRight 1s 1s linear forwards;
+        animation: mainLeftRight 2s 1s ease-in-out forwards;
     }
 
     #main .main_left .main_left_blank {
@@ -262,7 +262,7 @@
         width: 0;
         height: 5px;
         background: var(--box-border-color);
-        animation: mainRight 1s linear forwards;
+        animation: mainRight 1s ease-in forwards;
     }
     
     #main .main_right .main_right_text span:nth-child(2) {

@@ -122,43 +122,39 @@ header .gnb ul {
             transition: all 0.5s;
             overflow: hidden;
             padding: 20px;
+            /* a {
+                width: 60%;
+            }            
+            img {
+                width: 40%;
+                object-fit: contain;
+            }             */
+
+
             &:nth-child(1){
                 border-top: none;
-                background:linear-gradient(to right, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.1) 100%), url("./img/main.png") right/contain no-repeat;
-                /* a {
-                    position: relative;
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        bottom: -10%;
-                        width: 0;
-                        height: 2px;
-                        background: var(--box-border-color);
-                        transition: all 0.3s;
-                    }
-                } */
+                background:linear-gradient(to right,rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.2) 100%), url("./img/main.png") right/cover no-repeat;
             }
             &:nth-child(2){
-                background:linear-gradient(to left, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.1) 100%), url("./img/about.png") left/contain no-repeat;
+                background:linear-gradient(to left,rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.2) 100%), url("./img/about.png") left/contain no-repeat;
                 a {
                     justify-content: end;
                 }
             }
             &:nth-child(3){
-                background:linear-gradient(to right, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.1) 100%), url("./img/detail.png") right/contain no-repeat;
+                background:linear-gradient(to right, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.2) 100%), url("./img/detail.png") right/contain no-repeat;
                 a {
 
                 }
             }
             &:nth-child(4){
-                background:linear-gradient(to left, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.1) 100%), url("./img/end.png") left/contain no-repeat;
+                background:linear-gradient(to left, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.2) 100%), url("./img/end.png") left/contain no-repeat;
                 a {
                     justify-content: end;
                 }
             }
             &:hover {
-                flex: 1.2;
+                flex: 1.1;
             }
             &:hover a {
                 color: var(--box-border-color);
@@ -173,16 +169,12 @@ header .gnb ul {
                 color: var(--main-black-color);
                 text-shadow: -2px 0px var(--box-border-color), 0px 2px  var(--box-border-color), 1px 0px  var(--box-border-color), 0px -1px  var(--box-border-color);
                 transition: all 0.3s;
-                -webkit-transition: all 0.3s;
-                -moz-transition: all 0.3s;
-                -ms-transition: all 0.3s;
-                -o-transition: all 0.3s;
-}
+            }
         }
     }
     .close {
         position: absolute;
-        top: 2%;
+        top: 1.5%;
         right: 3%;
         cursor: pointer;
         transition: all 0.5s;
@@ -233,7 +225,7 @@ section {
     width: 1px;
     height: 0;
     background: var(--box-border-color);
-    animation: mainLeftRight 0.8s linear forwards;
+    animation: mainLeftRight 0.8s ease-in forwards;
 }
 
 @keyframes mainLeftRight {
@@ -255,7 +247,7 @@ section {
     width: 0;
     height: 1px;
     background: var(--box-border-color);
-    animation: mainleftbottom 0.8s linear forwards;
+    animation: mainleftbottom 0.8s ease-in forwards;
 }
 @keyframes mainleftbottom {
     100% {
@@ -373,7 +365,7 @@ section {
     width: 0;
     height: 5px;
     background: var(--box-border-color);
-    animation: mainRight 0.8s 0.8s linear forwards;
+    animation: mainRight 1.5s 0.8s ease-in-out forwards;
 }
 
 @keyframes mainRight {

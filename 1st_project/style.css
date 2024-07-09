@@ -479,7 +479,7 @@ section {
 
 #about_intro .about_intro_text div:nth-child(9) {
     font-family: 'SUIT-Regular';
-    transform: translateX(39%);
+    transform: translateX(42%);
 }
 
 
@@ -505,7 +505,7 @@ section {
 }
 
 #about_desc.active .about_desc_top_img {
-    animation: myImg 2s linear forwards;
+    animation: myImg 3s linear forwards;
 }
 
 @keyframes myImg {
@@ -686,21 +686,23 @@ section {
 }
 #end .end_footer .end_footer_top a {
     background: var(--main-black-color);
-    font-size: 2.3rem;
     color: var(--main-withe-color);
     border: 1px solid var(--box-border-color);
     transition: all 0.3s;
     &:first-child {
+        font-size: 2.3rem;
         padding: 15px 30px;
         border-radius: 10px;
     }
     &:last-child {
+        font-size: 1.5rem;
+        background: transparent;
         padding: 10px;
         border: none;
         text-align: center;
         &:hover {
-            transform: translateY(-30%);
             color: var(--box-border-color);
+            transform: translateY(-30%);
         }
     }
     &:hover:first-child{

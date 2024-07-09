@@ -12,6 +12,12 @@
     #main .main_right .main_right_text span:nth-child(2) {
         font-size: 1.8rem;
     }
+
+    /* about */
+    #about_intro .about_intro_text div:nth-child(9) {
+        transform: translateX(39%);
+    }
+
     /* end */
     #end .end_title span {
         font-size: 11.1rem;
@@ -75,7 +81,7 @@
     #end .end_title span em{
         font-size: 8.7rem;
     }
-    #end .end_footer .end_footer_top a {
+    #end .end_footer .end_footer_top a:first-child {
         font-size: 1.8rem;
     }
     #end .end_footer .end_footer_bottom span {
@@ -159,9 +165,12 @@
         font-size: 7.5rem;
     }
     #end .end_footer .end_footer_top a {
-        font-size: 1.5rem;
         &:first-child {
+            font-size: 1.5rem;
             padding: 10px 20px;
+        }
+        &:last-child {
+            font-size: 1rem;
         }
     }
     #end .end_footer .end_footer_bottom span {
@@ -473,9 +482,13 @@
         gap: 50px;
     }
     #end .end_footer .end_footer_top a {
-        font-size: 1.2rem;
         &:first-child {
+            font-size: 1.2rem;
             padding: 10px 15px;
+        }
+        
+        &:last-child {
+            font-size: 0.9rem;
         }
     }
     #end .end_footer .end_footer_bottom {

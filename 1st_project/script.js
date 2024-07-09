@@ -77,22 +77,22 @@ barSlideBtn.forEach((el) => {
 
 
 // gnb 클릭시 scroll 이동 이벤트
-const btn = document.querySelectorAll(".gnb ul li");
+// const btn = document.querySelectorAll(".gnb ul li");
 
-btn.forEach((item, index) => {
-  let currentIndex = 0;
-  item.addEventListener("click", () => {
-    const section = document.querySelectorAll("section");
-    const offSetTop = section[index].offsetTop;
-    console.log(offSetTop)
-    if(index >= 1) {
-      index = index +1
-    window.scrollTo({top:offSetTop, behavior:"smooth"})
-      index--
-    }
-    window.scrollTo({top:offSetTop, behavior:"smooth"})
-  })
-})
+// btn.forEach((item, index) => {
+//   let currentIndex = 0;
+//   item.addEventListener("click", () => {
+//     const section = document.querySelectorAll("section");
+//     const offSetTop = section[index].offsetTop;
+//     console.log(offSetTop)
+//     if(index >= 1) {
+//       index = index +1
+//     window.scrollTo({top:offSetTop, behavior:"smooth"})
+//       index--
+//     }
+//     window.scrollTo({top:offSetTop, behavior:"smooth"})
+//   })
+// })
 
 
 window.addEventListener("scroll", function() {
@@ -101,9 +101,8 @@ window.addEventListener("scroll", function() {
   const section = document.querySelectorAll("section");
 
   section.forEach((section) => {
-    if(windowScroll >= section.offsetHeight - window.innerHeight / 6) {
+    if(windowScroll >= section.offsetHeight) {
       section.classList.add("active");
     }
   })
-
 });

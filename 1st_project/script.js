@@ -61,9 +61,9 @@ barSlideBtn.forEach((el) => {
 //     span.textContent = char === " " ? "\u00A0" : char;
 //     span.style.opacity = 0;
 //     span.style.transform = "translateY(100%)";
-//     span.style.transition = "transform 0.3s, opacity 0.3s";
+//     span.style.transition = "transform 0.2s, opacity 0.2s";
 //     mainLeftTextTop.appendChild(span);
-
+    
 //     setTimeout(() => {
 //       requestAnimationFrame(() => {
 //         span.style.opacity = 1;
@@ -71,38 +71,42 @@ barSlideBtn.forEach((el) => {
 //       });
 //     }, delay);
 
-//     delay += 300;
+//     delay += 200;
 //   }
 // }
 
 
 // gnb 클릭시 scroll 이동 이벤트
-// const btn = document.querySelectorAll(".gnb ul li");
+const btn = document.querySelectorAll(".gnb ul li");
 
-// btn.forEach((item, index) => {
-//   let currentIndex = 0;
-//   item.addEventListener("click", () => {
-//     const section = document.querySelectorAll("section");
-//     const offSetTop = section[index].offsetTop;
-//     console.log(offSetTop)
-//     if(index >= 1) {
-//       index = index +1
-//     window.scrollTo({top:offSetTop, behavior:"smooth"})
-//       index--
-//     }
-//     window.scrollTo({top:offSetTop, behavior:"smooth"})
-//   })
-// })
+btn.forEach((item, index) => {
+  let currentIndex = 0;
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    const menu = document.querySelectorAll(".menu");
+    const offSetTop = menu[index].offsetTop;
+    window.scrollTo({top:offSetTop, behavior:"smooth"})
+  })
+})
 
 
+// 스크롤시 각 section에 active add 
 window.addEventListener("scroll", function() {
   let windowScroll = this.scrollY;
 
   const section = document.querySelectorAll("section");
 
   section.forEach((section) => {
-    if(windowScroll >= section.offsetHeight) {
+    if(windowScroll >= section.offsetHeight - this.window.innerHeight/2) {
       section.classList.add("active");
     }
   })
 });
+
+// scrollTop 클릭 시 최상단 이동
+const scrollTopBtn = document.querySelector(".scroll_top");
+
+scrollTopBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({top:0, behavior:"smooth"});
+})

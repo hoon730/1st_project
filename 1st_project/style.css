@@ -89,10 +89,10 @@ header .gnb ul {
     & li a {
         transition: all 0.5s;
     }
-    & li:hover a {
+    /* & li:hover a {
         font-family: "Fugaz One";
         color: var(--box-border-color);
-    }
+    } */
 }
 
 /* bar_slide */

@@ -1,11 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @font-face {
-    font-family: 'SUIT-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-family: 'fugaz_oneregular';
+    src: url('fugazone-regular-webfont.eot');
+    src: url('fugazone-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fugazone-regular-webfont.woff2') format('woff2'),
+        url('fugazone-regular-webfont.woff') format('woff'),
+        url('fugazone-regular-webfont.ttf') format('truetype'),
+        url('fugazone-regular-webfont.svg#fugaz_oneregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'suitregular';
+    src: url('suit-regular-webfont.eot');
+    src: url('suit-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('suit-regular-webfont.woff2') format('woff2'),
+        url('suit-regular-webfont.woff') format('woff'),
+        url('suit-regular-webfont.ttf') format('truetype'),
+        url('suit-regular-webfont.svg#suitregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 
 * {
@@ -63,7 +80,7 @@ header .logo_letter {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Fugaz One";
+    font-family: 'fugaz_oneregular';
     font-size: 1.5rem;
 }
 
@@ -88,7 +105,7 @@ header .gnb ul {
     align-items: center;
     & li a {
         transition: all 0.5s;
-        font-family: "Fugaz One";
+        font-family: 'fugaz_oneregular';
     }
     & li:hover a {
         color: var(--box-border-color);
@@ -158,7 +175,7 @@ header .gnb ul {
                 height: 100%;
                 display: flex;
                 align-items: center;
-                font-family: "Fugaz One";
+                font-family: 'fugaz_oneregular';
                 font-size: 5vw;
                 color: var(--main-black-color);
                 text-shadow: -2px 0px var(--box-border-color), 0px 2px  var(--box-border-color), 1px 0px  var(--box-border-color), 0px -1px  var(--box-border-color);
@@ -218,7 +235,7 @@ section {
     right: 0;
     width: 1px;
     height: 0;
-    box-shadow: 0 0 10px var(--box-border-color);
+    box-shadow: 0 0 15px var(--box-border-color);
     background: var(--box-border-color);
     animation: mainLeftRight 0.8s ease-in forwards;
 }
@@ -241,7 +258,7 @@ section {
     bottom: 0;
     width: 0;
     height: 1px;
-    box-shadow: 0 0 10px var(--box-border-color);
+    box-shadow: 0 0 15px var(--box-border-color);
     background: var(--box-border-color);
     animation: mainleftbottom 0.8s ease-in forwards;
 }
@@ -286,7 +303,7 @@ section {
     font-weight: 500;
 }
 #main .main_left .main_left_text .main_left_text_middle span em {
-    font-family: "Fugaz One";
+    font-family: 'fugaz_oneregular';
     text-shadow: -5px 0px var(--box-border-color), 0px 5px  var(--box-border-color), 1px 0px  var(--box-border-color), 0px -1px  var(--box-border-color);
 }
 
@@ -321,7 +338,7 @@ section {
     top: -100%;
     left: 0;
     &::first-letter{
-        font-family: "Fugaz One";
+        font-family: 'fugaz_oneregular';
         text-shadow: -5px 0px var(--box-border-color), 0px 5px  var(--box-border-color), 1px 0px  var(--box-border-color), 0px -1px  var(--box-border-color);
     }
     &.prev {
@@ -443,7 +460,7 @@ section {
 }
 
 #about_intro .about_intro_text div:nth-child(1) {
-    font-family: 'SUIT-Regular';
+    font-family: 'suitregular';
     transform: translateX(45%);
 }
 
@@ -475,13 +492,13 @@ section {
 }
 
 #about_intro .about_intro_text div:nth-child(9) {
-    font-family: 'SUIT-Regular';
+    font-family: 'suitregular';
     transform: translateX(42%);
 }
 
 
 #about_intro .about_intro_text .about_intro_text_en{
-    font-family: "Fugaz One";
+    font-family: 'fugaz_oneregular';
 }
 
 /* about_desc */
@@ -536,7 +553,7 @@ section {
 
 .about_desc_top .about_desc_top_left p{
     width: 60%;
-    font-family: 'SUIT-Regular';
+    font-family: 'suitregular';
     font-size: 1.8rem;
     text-align: justify;
     padding-left: 40px;
@@ -552,7 +569,7 @@ section {
 
 .about_desc_top .about_desc_top_right p{
     width: 60%;
-    font-family: 'SUIT-Regular';
+    font-family: 'suitregular';
     text-align: justify ;
     padding-right: 40px;
     font-size: 1.8rem;
@@ -564,7 +581,7 @@ section {
 
 .about_desc_bottom span{
     display: block;
-    font-family: "Fugaz One";
+    font-family: 'fugaz_oneregular';
     font-size: 27rem;
     text-align: center;
     color: var(--main-withe-color);
@@ -674,10 +691,10 @@ section {
 }
 
 #detail .detail_list .list .desc span {
-    font-family: 'SUIT-Regular';
+    font-family: 'suitregular';
     font-size: 1.2rem;
     &:first-child {
-        font-family: "Fugaz One";
+        font-family: 'fugaz_oneregular';
         font-size: 1.8rem;
     }
 }
@@ -695,7 +712,7 @@ section {
     font-size: 13.1rem;
 }
 #end .end_title span em {
-    font-family: "Fugaz One";
+    font-family: 'fugaz_oneregular';
     color: var(--box-border-color);
     text-shadow: -5px 0px var(--main-withe-color), 0px 5px  var(--main-withe-color), 1px 0px  var(--main-withe-color), 0px -1px  var(--main-withe-color);
 }

@@ -114,24 +114,26 @@ scrollTopBtn.addEventListener("click", (e) => {
 
 // gnb li 마우스오버 시 글자 이동
 
-// const gnbText = document.querySelectorAll(".gnb ul li a");
+const gnbText = document.querySelectorAll(".gnb ul li a");
 
-// gnbText.forEach((txt) => {
-//   txt.addEventListener("mouseover", () => {
-//     const txtValue = txt.innerText;
-//     let singleWord = txtValue.split('');
-//     // console.log(singleWord.length);
+gnbText.forEach((txt) => {
+  txt.addEventListener("mouseover", () => {
+    const txtValue = txt.innerText;
+    let singleWord = txtValue.split('');
+    txt.innerHTML = '';
   
-//     for(i = 0; i < singleWord.length; i++) {
-//       let span = document.createElement("span");
-//       span.innerHTML = singleWord[i];
-//       txt.appendChild(span);
-//       console.log(span)
+    for(i = 0; i < singleWord.length; i++) {
+      let span = document.createElement("span");
+      span.innerHTML = singleWord[i];
+      txt.appendChild(span);
+      
+      // span.style = "transition: all 0.3s; transform: translateY(100%);"
+      span.style.transition = "all 0.3s";
+      span.style.transform = "translateY(100%)";
+      console.log(span)
+    }
+    
 
-//       span.style = "transition: all 0.3s; transform: translateY(-100%);"
-//     }
-
-
-//   })
+  })
   
-// });
+});

@@ -88,11 +88,11 @@ header .gnb ul {
     align-items: center;
     & li a {
         transition: all 0.5s;
-    }
-    /* & li:hover a {
         font-family: "Fugaz One";
+    }
+    & li:hover a {
         color: var(--box-border-color);
-    } */
+    }
 }
 
 /* bar_slide */

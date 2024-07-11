@@ -188,7 +188,7 @@
     header .gnb {
         width: 32%;
         ul {
-            display: none;
+            display: none !important;
         }
         .bar_menu {
             display: block;

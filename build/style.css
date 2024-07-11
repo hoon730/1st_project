@@ -88,9 +88,9 @@ header .gnb ul {
     align-items: center;
     & li a {
         transition: all 0.5s;
+        font-family: "Fugaz One";
     }
     & li:hover a {
-        font-family: "Fugaz One";
         color: var(--box-border-color);
     }
 }
